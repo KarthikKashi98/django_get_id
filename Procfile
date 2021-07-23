@@ -1,1 +1,1 @@
-web: gunicorn app:app
+web: gunicorn task_new--log-file -
