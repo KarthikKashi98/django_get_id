@@ -15,9 +15,10 @@ from lock_tokens.sessions import check_for_session, lock_for_session, unlock_for
 
 
 @api_view(['GET'])
-def apiOverview(request):
+def reset(request):
+    Task.objects.filter(id=1).update(given_id= 1)
     api_urls = {
-        'list': '/tasklist/',
+        'id': 'id is set to 1',
 
     }
 
