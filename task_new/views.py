@@ -32,7 +32,7 @@ def taskList(request):
 
             lock_for_session(obj, request.session)
             print("i")
-            
+
             Task.objects.filter(id=1).update(given_id=F("given_id") + 1)
 
             serializer = TaskSerializer(Task.objects.all(), many=True)
